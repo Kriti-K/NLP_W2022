@@ -4,7 +4,7 @@ from nltk.corpus import stopwords
 import numpy as np
 stop = stopwords.words('english')
 
-model = tf.keras.models.load_model(r'Models\IBC_BERT')
+model = tf.keras.models.load_model(r'/content/NLP_W2022/Models/IBC_BERT')
 
 def preProcessText(text):
     text = text.lower()
