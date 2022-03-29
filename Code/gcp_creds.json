@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "steadfast-bebop-344602",
+  "private_key_id": "bdb7f3737db4557b2603ae7efe29a08caafd7c91",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCM5AuuJ/o64Grt\nohYc9/auCHsAjFxXB9H+iMq+jrGmvBj9UXAuGJzI8g14r2ooj6GpfxU3Xx+uSC7Y\n2yW4LMyuVqwn24apc2/Ind1Yw0M9inXsNmcj3XT9xvoiuSl+Z3Hib8WkMQ5sovgm\nMTfyZuVOL+stU+hCExx8SDJxzIZvVRQ0e6EniRsxRESjDq010UiDK+sk/8xu3m9L\njVJo7Ac4th5PK31dzUHbo+/GnRlCYZN2RWoSxfQbn5tgaclQ/eHZlzjAndl7k20R\nxRxZBl+BPgNcnaPFQTf4UcWUwv3vz32NFQD4tO7TCAPem/y2K1Dl+mvPOCXcx/es\n3c5zRKuNAgMBAAECggEABLDM8/N8+oihMFMrcebbGoH9K/bNIwQ6iUMsBaC1KNKg\n8SiACx2i23MCxs6HdfbX0E+DH2pP1DR8A5h1zrlstEf91Rl5oY4B0TryqEz4u2vi\nL2CQs4Ctr4tFDAxNGNomnP4EPv13hPj+0pd95nIz8GDBCPiYeXN7opmgVrb5kAUU\nKm0pD81hh9ULCYMUz+jyQhPuNLBwBKIbBXMzSHpxXx0vasynea0++N3sc0NLI1PR\noeCEFVFEl3k2hRyg0Hvam/VN9RQMegRxNUPAHhLLEb1O4HrOggIwFgfcVvUzQsNQ\nkxJ1DiTIJjOvgqiRo+3fJrgnM1mvUbEDVCAaJyR0kwKBgQC/P05vya1+ZHQgh+Lv\nxi/3qFpUrmTQjpWdd4rr1tsgoH5Y1l+vi8+UGuSmEDQZ9mlZ94KG5fbfoHhvgINR\nXXLqGw3XmnCgD/hSh8jpPyKGUIXsjDO/5mq3UcH6suasES5BsNJ5aITzifAbwrJ1\nLaEFG05LnO7JIcHnCYRpQNuU4wKBgQC8mACn+pSx7fAm52E0NYujH3seROxZxCJs\nWAZ91uNcC8G5G3DagvqoWrHsEus7deh11oGEMX79fdDabwYw9EYktwyoMZ2ScRg7\nY+qyPGgtvtSfINg0STJ0MCjaAPi5E5VPDpQa6qHHnaLzpibPesyx3nEYYcVz8OW6\nDnqIEtYYzwKBgQC4HMXyMIHpj+OL/cWnd3BuR5DOvSUo8ltuwMroyGskOd3owFhV\ns48e0dUVWbwO0n4RsoniPDkyiFXpYhsJlaEvZuQoj/Gk5jr1mOr+QV2HWLXVSBP5\nxmUuHnNUWi5fsBqL+yJk5w43NrAEyabr0AWX2PXDLU1kLC9zsGHcwieiaQKBgDgG\ne+NrCHNXOQmFoRXOdl4OQxf557C/GG7RM5R8muxEPdeMtFjloisTTlnQQPtYCqe/\nApjPz2bk0n+hjdhLKO9NRcBNhP71A/rYsuciFNzKHQXszu2xdQCZMfmZYkow7CEh\nNpRMcaUISllRWaQ3WcnZSAWzPeI0hTphhLsZxWp3AoGAHmV5vZg6XaNT3BcOiVqg\nH7Y+xO5FxHVDwq+y70tZFQjMjvK/DKgz0rqSFFm3JjFGzT6nK9hhYLEfmneeUeO8\nFfE9ZsAcnNJ0tDrSyBeoBe+H9Fr0xvALayiQOkYmzUMv5mRS8LwDFhZts7SJ95mG\niukNbO1lwH05u3Cl56ViqGo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "comp8730@steadfast-bebop-344602.iam.gserviceaccount.com",
+  "client_id": "101191185670089617184",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/comp8730%40steadfast-bebop-344602.iam.gserviceaccount.com"
+}
