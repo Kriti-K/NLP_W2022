@@ -3,7 +3,7 @@ from google.cloud import language_v1
 import os
 import numpy as np
 from Levenshtein import distance as lsd
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="C:/gcp_creds.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="/content/NLP_W2022/Code/gcp_creds.json"
 client = language_v1.LanguageServiceClient()
 type_ = language_v1.types.Document.Type.PLAIN_TEXT
 language = "en"
