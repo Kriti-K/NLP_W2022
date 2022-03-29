@@ -9,7 +9,7 @@ type_ = language_v1.types.Document.Type.PLAIN_TEXT
 language = "en"
 encoding_type = language_v1.EncodingType.UTF8
 
-with open(r'Entities\StereosetEntities.pkl','rb') as file_handle:
+with open(r'/content/NLP_W2022/Entities/StereosetEntities.pkl','rb') as file_handle:
     ss_ents = pickle.load(file_handle)
     
 def filter(entities):
