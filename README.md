@@ -24,11 +24,11 @@ pip install -r requirements.txt
 ```
 Step 3: Download the required files using the ```wget``` commands
 ```bash
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1pVViO4phYWIJ2UgC_xaZrU4Y_1fVcNDF' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1pVViO4phYWIJ2UgC_xaZrU4Y_1fVcNDF" -O /content/NLP_W2022/Models/IBC_BERT/variables/variables.data-00000-of-00001 && rm -rf /tmp/cookies.txt
+!wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1pVViO4phYWIJ2UgC_xaZrU4Y_1fVcNDF' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1pVViO4phYWIJ2UgC_xaZrU4Y_1fVcNDF" -O /content/NLP_W2022/Models/IBC_BERT/variables/variables.data-00000-of-00001 && rm -rf /tmp/cookies.txt
 
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1A4cSYIi5fak-dMmP5uNaYeGTAbbk-rg9' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1A4cSYIi5fak-dMmP5uNaYeGTAbbk-rg9" -O /content/NLP_W2022/Code/gcp_creds.json && rm -rf /tmp/cookies.txt
+!wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1A4cSYIi5fak-dMmP5uNaYeGTAbbk-rg9' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1A4cSYIi5fak-dMmP5uNaYeGTAbbk-rg9" -O /content/NLP_W2022/Code/gcp_creds.json && rm -rf /tmp/cookies.txt
 
-python -m nltk.downloader all
+!python -m nltk.downloader all
 ``` 
 
 ```bash
@@ -71,4 +71,9 @@ To train and test your own dataset on our model architecture, the dataset needs 
 To train your own dataset, you can run the following command in the terminal:
 ```bash
 python3 new_train_test.py "filepath"
+```
+
+You can also customize and add new entities according to your own dataset. For example, if you wanted to add entities for a narrowed down problem (like a dataset that has sentences targeting only one particular race or religion), you can do so using the ```train_entities.py``` file: 
+```bash
+python3 train_entities.py "filepath"
 ```
