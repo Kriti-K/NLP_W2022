@@ -24,11 +24,11 @@ pip install -r requirements.txt
 ```
 Step 3: Download the required files using the ```wget``` commands
 ```bash
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1pVViO4phYWIJ2UgC_xaZrU4Y_1fVcNDF' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1pVViO4phYWIJ2UgC_xaZrU4Y_1fVcNDF" -O /content/NLP_W2022/Models/IBC_BERT/variables/variables.data-00000-of-00001 && rm -rf /tmp/cookies.txt
+!wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1pVViO4phYWIJ2UgC_xaZrU4Y_1fVcNDF' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1pVViO4phYWIJ2UgC_xaZrU4Y_1fVcNDF" -O /content/NLP_W2022/Models/IBC_BERT/variables/variables.data-00000-of-00001 && rm -rf /tmp/cookies.txt
 
-wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1A4cSYIi5fak-dMmP5uNaYeGTAbbk-rg9' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1A4cSYIi5fak-dMmP5uNaYeGTAbbk-rg9" -O /content/NLP_W2022/Code/gcp_creds.json && rm -rf /tmp/cookies.txt
+!wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1A4cSYIi5fak-dMmP5uNaYeGTAbbk-rg9' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1A4cSYIi5fak-dMmP5uNaYeGTAbbk-rg9" -O /content/NLP_W2022/Code/gcp_creds.json && rm -rf /tmp/cookies.txt
 
-python -m nltk.downloader all
+!python -m nltk.downloader all
 ``` 
 
 ```bash
@@ -55,3 +55,20 @@ Output: This document is biased towards Conservatives.
 ```
 
 To see the detailed execution and explanation of every part of our code, refer to [this](https://colab.research.google.com/drive/1pqRSOrfyt7uxev3SLYFKioloI7ElW4g4?usp=sharing) notebook.
+
+## Train and test your own dataset
+To train and test your own dataset on our model architecture, the dataset needs to be in this specification:
+ - It has to be in a ```.csv``` file with 2 columns, the first should contain the sentences and the second should contain their labels. 
+ - There should be 3 categories in the dataset, ``Liberal, Neutral, and Conservative``. 
+ Example dataset: 
+
+| Sentences| Lables | 
+| :---        |        ---: |          
+| xyz      | liberal| 
+| abc| conservative        | 
+| pqr| neutral        | 
+
+To train your own dataset, you can run the following command in the terminal:
+```bash
+python3 new_train_test.py "filepath"
+```
