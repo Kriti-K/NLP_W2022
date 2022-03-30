@@ -54,4 +54,4 @@ Output: This document is biased towards Conservatives.
 		It does not speak about race or religion
 ```
 
-
+To see the detailed execution and explanation of every part of our code, refer to [this](https://colab.research.google.com/drive/1pqRSOrfyt7uxev3SLYFKioloI7ElW4g4?usp=sharing) notebook.
