@@ -36,7 +36,7 @@ python3 run.py "<input text>"
 ```
 A tutorial notebook is available [here](https://colab.research.google.com/drive/1EQ7-7QyUd1A7B6zIB5p6mK0ZIZYHd3IB?authuser=1#scrollTo=kr8pSED4YSPv) that displays the execution of all these steps and performs testing of the code as well. 
 
-## Overview
+## [Overview](https://colab.research.google.com/drive/1pqRSOrfyt7uxev3SLYFKioloI7ElW4g4?usp=sharing)
 The system takes in a text input of an article and undergoes 2 steps of processing: 
 1. First the political polarity of the article is determined.
 	For this step, the dataset of our choice was the [Ideological Books Corpus(IBC)](https://people.cs.umass.edu/~miyyer/ibc/index.html) with sub-sentential annotations[3]. It includes 4,062 sentences annotated for political ideology at a sub-sentential level. Specifically, it contains 2025 liberal sentences, 1701 conservative sentences, and 600 neutral sentences. 
