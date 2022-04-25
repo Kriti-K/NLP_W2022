@@ -77,3 +77,45 @@ You can also customize and add new entities according to your own dataset. For e
 ```bash
 python3 train_entities.py "filepath"
 ```
+## Evaluation 
+Since our system consists of two different models stacked one after the other, the evaluation methodology cannot be straightforward.  To evaluate our system, we created an aggregated dataset that contained the following types of texts:  
+A: Texts that are both political and racially/religiously biased 
+B: Texts that are only political but not racially/religiously biased
+C: Texts that are not political but are racially/religiously biased
+D:Texts that are neither political nor racially/religiously biased 
+Then, the goal of our model becomes to identify A among all other categories. For example, we give a random news "a" to political ideology detection model, if the first model says "a" is political, then it gets passed to the entity sentiment analysis model. If the second model says "a" is racial, then we infer that "a" is from category A.
+We already know "a" belongs to what category. If A is the correct category, this counts a true classification. Else it is a false prediction. 
+
+And this way, our problem becomes a classification problem. 
+
+### Evaluation Datasets
+
+For A, we used the Social Bias Frames Dataset, which includes 642 texts that have both political and racial/religious bias. For selecting the B, C and D, we chose to sample inputs from the [News Category Dataset](https://www.kaggle.com/datasets/rmisra/news-category-dataset). This dataset includes 200k news articles labelled in multiple categories 
+
+To compare our models with the state of the art, we used the [Ideological Books Corpus](https://people.cs.umass.edu/~miyyer/ibc/index.html) dataset to measure the performance for the first model that detects the political ideology. For the second model, we compared our method on 2 datasets, [Hate speech in US 2020 elections](https://arxiv.org/abs/2103.01664) and [ConvAbuse](https://arxiv.org/abs/2109.09483) dataset. 
+
+### Baselines
+Since there is no research work done that does exactly the same task as ours, there is no direct baseline that we can compare our models to. Thus, we need to compare both our models individually, even though we evaluate the entire system as a whole. 
+For political ideology detection, we selected the [Recurrent Neural Network with Word2Vec](https://people.cs.umass.edu/~miyyer/ibc/index.html) embeddings proposed by M. Iyyer, 2014. 
+For the Entity Sentiment Analysis, since the final output is a simple sentiment analysis problem, we compare our method with Google's pretrained [BERT](https://aclanthology.org/N19-1423/) model on the datasets mentioned above. 
+### Results 
+Below are the results when the entire system was evaluated according to our methodology. We use the **F1 Score, Precision and Recall** as our metrics of choice here. Even though the AUC is most preferred metric for classification tasks, it could not be generated here as we are combining output of 2 models here. Because of that, we are not able to generate absolute probabilities for the final output. 
+| Metric| Score Value | 
+| :---        |        ---: |          
+| Precision      | 0.71| 
+| Recall | 0.90| 
+| F1 Score| 0.79| 
+As seen in the table above, our proposed method has an F1 score of 0.79, meaning that our algorithm achieves some degree of success in identifying the political leaning of the articles and whether it uses a race or religion to manipulate its readers.
+
+![alt text](https://raw.githubusercontent.com/Kriti-K/NLP_W2022/main/Evaluation/Result%20Photos/Picture1.png)
+
+As seen in the image above, the model for Phase 1 (political ideology detection) that we propose (BERT without the repeating n-grams) performs the best out of the tested models. It provides a substantial 7% increase when compared to the baseline model (RNN+W2V).
+![alt text](https://raw.githubusercontent.com/Kriti-K/NLP_W2022/main/Evaluation/Result%20Photos/Picture2.png)
+
+The image above shows how our sentiment analysis pipeline stacks up against the state-of-the-art model (BERT) with respect to the F1 Score. We observe that our model does not out-perform the BERT model. One reason behind this is that we are limiting our sentiment analysis on only those entities that are considered political, racial or religious, but it might occur that there are no such entities but the text is still speaking positively or negatively about something. 
+This is also translated on in the Second dataset (Hate Speech in 2020 elections) in the chart. Because we are using a dataset that has political, racial and religious entities, the F1 score is higher as compared to the ConvAbuse dataset. 
+
+## Conclusion
+From the above results, we can conclude that the system that we propose is able to successfully classify the political leaning of news/digital media articles and further detect whether the articles makes use of a particular race/religion to manipulate its voter-base. 
+While the models do not achieve near-perfect metric scores, our system acts a stepping stone in this domain. This research can further be taken forward with more data analysis on the political ideology detection part and trying out different methodologies for entity sentiment analysis system.
+
