@@ -78,11 +78,16 @@ You can also customize and add new entities according to your own dataset. For e
 python3 train_entities.py "filepath"
 ```
 ## Evaluation 
-Since our system consists of two different models stacked one after the other, the evaluation methodology cannot be straightforward.  To evaluate our system, we created an aggregated dataset that contained the following types of texts:  
+Since our system consists of two different models stacked one after the other, the evaluation methodology cannot be straightforward.  To evaluate our system, we created an aggregated dataset that contained the following types of texts: 
+
 A: Texts that are both political and racially/religiously biased 
+
 B: Texts that are only political but not racially/religiously biased
+
 C: Texts that are not political but are racially/religiously biased
+
 D:Texts that are neither political nor racially/religiously biased 
+
 Then, the goal of our model becomes to identify A among all other categories. For example, we give a random news "a" to political ideology detection model, if the first model says "a" is political, then it gets passed to the entity sentiment analysis model. If the second model says "a" is racial, then we infer that "a" is from category A.
 We already know "a" belongs to what category. If A is the correct category, this counts a true classification. Else it is a false prediction. 
 
